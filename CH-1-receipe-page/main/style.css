@@ -1,0 +1,205 @@
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.8rem;
+    color: #8b4513;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: bold;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Ingredients List Styling */
+
+.ingredients ul {
+    list-style: none;
+    padding-left:0;
+}
+
+.ingredients li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ingredients li:last-child {
+    border-bottom: none;
+}
+.ingredients li ::before {
+    content: "•";
+    color: #8b4513;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Instructions List Styling */
+
+.instructions ol {
+    counter-reset: step-counter;
+    /* list-style: none; */
+    padding-left: 0;
+}
+
+.instructions li {
+    counter-increment: step-counter;
+    padding: 12px 0;
+    padding-left: 40px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}   
+
+.instructions li:last-child {
+    border-bottom: none;
+}
+
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.nutrition tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nutrition tr:last-child {
+    border-bottom: none;
+}
+
+.nutrition th,
+.nutrition td {
+    padding: 12px 0;
+    text-align: left;
+}
+
+.nutrition th {
+    font-weight: normal;
+    color: #666;
+    width: 50%;
+}
+
+.nutrition td {
+    font-weight: bold;
+    color: #8b4513;
+    font-size: 1.1rem;
+}
+
+
+/* Preparation Time Highlighting */
+.preparation-time {
+    background-color: #fff5f5;
+    border: 1px solid #f0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.preparation-time h2 {
+    color: #d63384;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.preparation-time ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.preparation-time li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.preparation-time li::before {
+    content: "⏱";
+    position: absolute;
+    left: 0;
+    color: #d63384;
+}
+/* Section Separation */
+.ingredients,
+.instructions,
+.nutrition {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nutrition {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Add subtle background to sections */
+.ingredients,
+.instructions,
+.nutrition {
+    background-color: #fafafa;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.nutrition {
+    background-color: #f8f9fa;
+}
+
+/* Enhanced Container */
+.recipe-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+}
+
+/* Add hover effect */
+.recipe-container:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
