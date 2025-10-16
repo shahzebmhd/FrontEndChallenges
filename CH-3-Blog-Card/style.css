@@ -27,6 +27,7 @@ body{
     text-align: center;
     margin: 0 1em;
     box-shadow: 9px 9px rgb(0, 0, 0);
+    border: 2px solid hsl(0, 0%, 40%);
 }
 
 .card img{
