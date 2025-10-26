@@ -1,0 +1,220 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+- Green 500: hsl(158, 36%, 37%)
+- Green 700: hsl(158, 42%, 18%)
+
+### Neutral
+
+- Black: hsl(212, 21%, 14%)
+- Grey: hsl(228, 12%, 48%)
+- Cream: hsl(30, 38%, 92%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+ */
+
+
+/* Mobile-First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* root */
+html {
+    font-size:16px
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Align-item vs Justify-content */
+}
+
+button, li {
+    font-family: inherit;
+}
+
+h1 {
+    color:hsl(212, 21%, 14%);
+}
+
+.price{
+    color: hsl(158, 36%, 37%);
+}
+
+h1, .price {
+    font-family: "Fraunces", sans-serif;;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+p{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.8;
+}
+
+
+.container{
+    max-width: 600px;
+    margin-top: 10vh;
+}
+
+.container h1{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.container article:first-child img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.container article:last-child {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container p {
+    margin-bottom: 2rem;
+}
+
+
+.container ul {
+display: flex;
+align-items: center;
+margin-bottom: 2rem;    
+}
+
+
+.container ul li:first-child {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.container ul li:nth-child(2) {
+color: hsl(228, 12%, 48%);
+}
+
+.container .btn {
+background-color:hsl(158, 36%, 37%) ;
+color: #fff;
+font-weight: 700;
+font-size: 1rem;
+padding: 1rem 2rem;
+border-radius: 0.625rem;
+cursor: pointer;
+transition: 0.3s;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.container .btn:hover {
+background-color: hsl(158, 38%, 20%);;
+}
+
+.container .btn img {
+    margin-right: 0.5rem
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.attribution a {
+ color: hsl(228, 45%, 44%);
+}
+
+/* Mobile */
+@media (min-width: 640px) {
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+  .container article:first-child img {
+    border-radius: 0.625rem 0 0 0.625rem;
+    width: 100%;
+  }
+
+    .container article:last-child {
+    border-radius: 0 0.625rem 0.625rem 0;
+    margin-top: 0;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+    picture img {
+    height: 100%;
+  }
+  .container p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  html { font-size: 15px; }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  html { font-size: 16px; }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  html { font-size: 18px; }
+}
