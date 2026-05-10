@@ -7,9 +7,22 @@ import { defineConfig } from 'vite';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function resolveBase(): string {
+  // Allow override for forks or custom hosting
+  if (process.env.VITE_BASE) {
+    return process.env.VITE_BASE.endsWith('/') ? process.env.VITE_BASE : `${process.env.VITE_BASE}/`;
+  }
+  const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+  // Pages URL is /<repo>/CH-6 - Seating Chart/index.html — assets must load under that prefix
+  if (repoName) {
+    return `/${repoName}/CH-6 - Seating Chart/`;
+  }
+  return './';
+}
+
 export default defineConfig(({mode}) => {
   return {
-    base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './',
+    base: resolveBase(),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
