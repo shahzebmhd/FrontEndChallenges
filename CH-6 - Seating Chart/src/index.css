@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Marcellus", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-maroon: #800000;
+  --color-gold: #E5D5A5;
+  --color-gold-light: #FAF9F6;
+}
+
+body {
+  @apply bg-gold-light text-maroon font-sans;
+}
